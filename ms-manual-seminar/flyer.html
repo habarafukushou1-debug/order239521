@@ -37,7 +37,7 @@
   /* ---------- header ---------- */
   .head{
     position:relative; background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
-    color:#fff; padding:9mm 14mm 13mm;
+    color:#fff; padding:8mm 14mm 12mm;
   }
   .head::after{ /* wave edge */
     content:""; position:absolute; left:0; right:0; bottom:-1px; height:12mm;
@@ -120,18 +120,16 @@
   .steps li:last-child b{ background:var(--pink); }
   .steps em{ font-style:normal; color:var(--pink); }
   .map svg{ width:100%; height:auto; display:block; }
-  .room{ flex:1.5; background:#fff; border-radius:4mm; border:1.5px solid var(--navy); padding:3mm 3.5mm 2.5mm; }
+  .room{ flex:1.6; background:#fff; border-radius:4mm; border:1.5px solid var(--navy); padding:3mm 3.5mm 2.5mm; }
   .room h3{ font-family:"Zen Maru Gothic",sans-serif; font-size:12pt; color:var(--navy); margin-bottom:1mm; }
-  .room h3 small{ font-size:8.5pt; color:var(--pink); margin-left:1mm; }
-  .room svg{ width:100%; height:auto; display:block; }
-  .legend{ font-size:8pt; color:var(--muted); line-height:1.5; margin-top:.5mm; }
-  .legend i{ display:inline-block; vertical-align:middle; margin-right:1mm; }
-  .legend .lt{ width:4mm; height:1.6mm; background:#c9d4e8; border-radius:.3mm; }
-  .legend .lc{ width:1.8mm; height:1.8mm; background:#e8577a; border-radius:50%; }
-  .legend span{ display:block; font-size:7.5pt; }
+  .room h3 small{ font-size:10pt; color:var(--pink); margin-left:1mm; }
+  .floor-wrap{ position:relative; }
+  .floor-wrap img{ width:100%; display:block; }
+  .floor-wrap .callout{ position:absolute; inset:0; width:100%; height:100%; }
+  .legend{ font-size:9pt; color:var(--muted); line-height:1.5; margin-top:.5mm; }
 
   /* ---------- footer ---------- */
-  .foot{ margin-top:auto; padding:4mm 14mm 7mm; text-align:center; }
+  .foot{ margin-top:auto; padding:3.5mm 14mm 6mm; text-align:center; }
   .msg{ font-size:11.5pt; line-height:1.6; background:#fff; border:2px solid var(--pink); border-radius:999px; padding:3mm 6mm; }
   .msg strong{ color:var(--navy); display:block; font-size:12.5pt; }
   .stamp{ position:absolute; right:8mm; top:7mm; width:66mm; z-index:2; background:#fff; border-radius:50%; padding:5mm 4mm 3mm; border:2mm solid #ffd9e3; box-shadow:0 2mm 5mm rgba(0,0,0,.25); }
@@ -220,168 +218,25 @@
         <ol class="steps">
           <li><b>1</b>JR広島駅 南口へ</li>
           <li><b>2</b>直結通路でエールエールA館へ</li>
-          <li><b>3</b>エレベーターで<em>6階 ROOM2</em>へ</li>
+          <li><b>3</b><span>エレベーターで<em>6階</em>へ</span></li>
+          <li><b>4</b><span><em>受付</em>を通って<em>ROOM2</em>へ</span></li>
         </ol>
       </div>
-      <div class="room" aria-label="ROOM2 配置図">
-        <h3>ROOM2 配置図 <small>約146㎡・スクール形式（イメージ）</small></h3>
-        <svg viewBox="0 0 240 124" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans JP, sans-serif">
-        <rect x="4" y="4" width="232" height="108" rx="3" fill="#fff" stroke="#1f3a68" stroke-width="2.5"/>
-        <rect x="9" y="28" width="6" height="60" rx="2" fill="#1f3a68"/>
-        <text x="12" y="24" font-size="6" fill="#1f3a68" text-anchor="middle" font-weight="700">WB</text>
-        <rect x="20" y="49" width="9" height="18" rx="1.5" fill="#f2a93b"/>
-        <text x="24.5" y="56" font-size="5" fill="#fff" text-anchor="middle" font-weight="700">講</text><text x="24.5" y="63" font-size="5" fill="#fff" text-anchor="middle" font-weight="700">師</text>
-        <rect x="42.0" y="9" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="51.0" cy="12.3" r="2" fill="#e8577a"/>
-        <circle cx="51.0" cy="19.0" r="2" fill="#e8577a"/>
-        <circle cx="51.0" cy="25.7" r="2" fill="#e8577a"/>
-        <rect x="42.0" y="32" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="51.0" cy="35.3" r="2" fill="#e8577a"/>
-        <circle cx="51.0" cy="42.0" r="2" fill="#e8577a"/>
-        <circle cx="51.0" cy="48.7" r="2" fill="#e8577a"/>
-        <rect x="42.0" y="63" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="51.0" cy="66.3" r="2" fill="#e8577a"/>
-        <circle cx="51.0" cy="73.0" r="2" fill="#e8577a"/>
-        <circle cx="51.0" cy="79.7" r="2" fill="#e8577a"/>
-        <rect x="42.0" y="86" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="51.0" cy="89.3" r="2" fill="#e8577a"/>
-        <circle cx="51.0" cy="96.0" r="2" fill="#e8577a"/>
-        <circle cx="51.0" cy="102.7" r="2" fill="#e8577a"/>
-        <rect x="63.3" y="9" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="72.3" cy="12.3" r="2" fill="#e8577a"/>
-        <circle cx="72.3" cy="19.0" r="2" fill="#e8577a"/>
-        <circle cx="72.3" cy="25.7" r="2" fill="#e8577a"/>
-        <rect x="63.3" y="32" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="72.3" cy="35.3" r="2" fill="#e8577a"/>
-        <circle cx="72.3" cy="42.0" r="2" fill="#e8577a"/>
-        <circle cx="72.3" cy="48.7" r="2" fill="#e8577a"/>
-        <rect x="63.3" y="63" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="72.3" cy="66.3" r="2" fill="#e8577a"/>
-        <circle cx="72.3" cy="73.0" r="2" fill="#e8577a"/>
-        <circle cx="72.3" cy="79.7" r="2" fill="#e8577a"/>
-        <rect x="63.3" y="86" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="72.3" cy="89.3" r="2" fill="#e8577a"/>
-        <circle cx="72.3" cy="96.0" r="2" fill="#e8577a"/>
-        <circle cx="72.3" cy="102.7" r="2" fill="#e8577a"/>
-        <rect x="84.6" y="9" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="93.6" cy="12.3" r="2" fill="#e8577a"/>
-        <circle cx="93.6" cy="19.0" r="2" fill="#e8577a"/>
-        <circle cx="93.6" cy="25.7" r="2" fill="#e8577a"/>
-        <rect x="84.6" y="32" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="93.6" cy="35.3" r="2" fill="#e8577a"/>
-        <circle cx="93.6" cy="42.0" r="2" fill="#e8577a"/>
-        <circle cx="93.6" cy="48.7" r="2" fill="#e8577a"/>
-        <rect x="84.6" y="63" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="93.6" cy="66.3" r="2" fill="#e8577a"/>
-        <circle cx="93.6" cy="73.0" r="2" fill="#e8577a"/>
-        <circle cx="93.6" cy="79.7" r="2" fill="#e8577a"/>
-        <rect x="84.6" y="86" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="93.6" cy="89.3" r="2" fill="#e8577a"/>
-        <circle cx="93.6" cy="96.0" r="2" fill="#e8577a"/>
-        <circle cx="93.6" cy="102.7" r="2" fill="#e8577a"/>
-        <rect x="105.9" y="9" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="114.9" cy="12.3" r="2" fill="#e8577a"/>
-        <circle cx="114.9" cy="19.0" r="2" fill="#e8577a"/>
-        <circle cx="114.9" cy="25.7" r="2" fill="#e8577a"/>
-        <rect x="105.9" y="32" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="114.9" cy="35.3" r="2" fill="#e8577a"/>
-        <circle cx="114.9" cy="42.0" r="2" fill="#e8577a"/>
-        <circle cx="114.9" cy="48.7" r="2" fill="#e8577a"/>
-        <rect x="105.9" y="63" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="114.9" cy="66.3" r="2" fill="#e8577a"/>
-        <circle cx="114.9" cy="73.0" r="2" fill="#e8577a"/>
-        <circle cx="114.9" cy="79.7" r="2" fill="#e8577a"/>
-        <rect x="105.9" y="86" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="114.9" cy="89.3" r="2" fill="#e8577a"/>
-        <circle cx="114.9" cy="96.0" r="2" fill="#e8577a"/>
-        <circle cx="114.9" cy="102.7" r="2" fill="#e8577a"/>
-        <rect x="127.2" y="9" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="136.2" cy="12.3" r="2" fill="#e8577a"/>
-        <circle cx="136.2" cy="19.0" r="2" fill="#e8577a"/>
-        <circle cx="136.2" cy="25.7" r="2" fill="#e8577a"/>
-        <rect x="127.2" y="32" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="136.2" cy="35.3" r="2" fill="#e8577a"/>
-        <circle cx="136.2" cy="42.0" r="2" fill="#e8577a"/>
-        <circle cx="136.2" cy="48.7" r="2" fill="#e8577a"/>
-        <rect x="127.2" y="63" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="136.2" cy="66.3" r="2" fill="#e8577a"/>
-        <circle cx="136.2" cy="73.0" r="2" fill="#e8577a"/>
-        <circle cx="136.2" cy="79.7" r="2" fill="#e8577a"/>
-        <rect x="127.2" y="86" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="136.2" cy="89.3" r="2" fill="#e8577a"/>
-        <circle cx="136.2" cy="96.0" r="2" fill="#e8577a"/>
-        <circle cx="136.2" cy="102.7" r="2" fill="#e8577a"/>
-        <rect x="148.5" y="9" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="157.5" cy="12.3" r="2" fill="#e8577a"/>
-        <circle cx="157.5" cy="19.0" r="2" fill="#e8577a"/>
-        <circle cx="157.5" cy="25.7" r="2" fill="#e8577a"/>
-        <rect x="148.5" y="32" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="157.5" cy="35.3" r="2" fill="#e8577a"/>
-        <circle cx="157.5" cy="42.0" r="2" fill="#e8577a"/>
-        <circle cx="157.5" cy="48.7" r="2" fill="#e8577a"/>
-        <rect x="148.5" y="63" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="157.5" cy="66.3" r="2" fill="#e8577a"/>
-        <circle cx="157.5" cy="73.0" r="2" fill="#e8577a"/>
-        <circle cx="157.5" cy="79.7" r="2" fill="#e8577a"/>
-        <rect x="148.5" y="86" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="157.5" cy="89.3" r="2" fill="#e8577a"/>
-        <circle cx="157.5" cy="96.0" r="2" fill="#e8577a"/>
-        <circle cx="157.5" cy="102.7" r="2" fill="#e8577a"/>
-        <rect x="169.8" y="9" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="178.8" cy="12.3" r="2" fill="#e8577a"/>
-        <circle cx="178.8" cy="19.0" r="2" fill="#e8577a"/>
-        <circle cx="178.8" cy="25.7" r="2" fill="#e8577a"/>
-        <rect x="169.8" y="32" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="178.8" cy="35.3" r="2" fill="#e8577a"/>
-        <circle cx="178.8" cy="42.0" r="2" fill="#e8577a"/>
-        <circle cx="178.8" cy="48.7" r="2" fill="#e8577a"/>
-        <rect x="169.8" y="63" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="178.8" cy="66.3" r="2" fill="#e8577a"/>
-        <circle cx="178.8" cy="73.0" r="2" fill="#e8577a"/>
-        <circle cx="178.8" cy="79.7" r="2" fill="#e8577a"/>
-        <rect x="169.8" y="86" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="178.8" cy="89.3" r="2" fill="#e8577a"/>
-        <circle cx="178.8" cy="96.0" r="2" fill="#e8577a"/>
-        <circle cx="178.8" cy="102.7" r="2" fill="#e8577a"/>
-        <rect x="191.1" y="9" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="200.1" cy="12.3" r="2" fill="#e8577a"/>
-        <circle cx="200.1" cy="19.0" r="2" fill="#e8577a"/>
-        <circle cx="200.1" cy="25.7" r="2" fill="#e8577a"/>
-        <rect x="191.1" y="32" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="200.1" cy="35.3" r="2" fill="#e8577a"/>
-        <circle cx="200.1" cy="42.0" r="2" fill="#e8577a"/>
-        <circle cx="200.1" cy="48.7" r="2" fill="#e8577a"/>
-        <rect x="191.1" y="63" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="200.1" cy="66.3" r="2" fill="#e8577a"/>
-        <circle cx="200.1" cy="73.0" r="2" fill="#e8577a"/>
-        <circle cx="200.1" cy="79.7" r="2" fill="#e8577a"/>
-        <rect x="191.1" y="86" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="200.1" cy="89.3" r="2" fill="#e8577a"/>
-        <circle cx="200.1" cy="96.0" r="2" fill="#e8577a"/>
-        <circle cx="200.1" cy="102.7" r="2" fill="#e8577a"/>
-        <rect x="212.4" y="9" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="221.4" cy="12.3" r="2" fill="#e8577a"/>
-        <circle cx="221.4" cy="19.0" r="2" fill="#e8577a"/>
-        <circle cx="221.4" cy="25.7" r="2" fill="#e8577a"/>
-        <rect x="212.4" y="32" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="221.4" cy="35.3" r="2" fill="#e8577a"/>
-        <circle cx="221.4" cy="42.0" r="2" fill="#e8577a"/>
-        <circle cx="221.4" cy="48.7" r="2" fill="#e8577a"/>
-        <rect x="212.4" y="63" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="221.4" cy="66.3" r="2" fill="#e8577a"/>
-        <circle cx="221.4" cy="73.0" r="2" fill="#e8577a"/>
-        <circle cx="221.4" cy="79.7" r="2" fill="#e8577a"/>
-        <rect x="212.4" y="86" width="4.5" height="20" rx="1" fill="#c9d4e8"/>
-        <circle cx="221.4" cy="89.3" r="2" fill="#e8577a"/>
-        <circle cx="221.4" cy="96.0" r="2" fill="#e8577a"/>
-        <circle cx="221.4" cy="102.7" r="2" fill="#e8577a"/>
-        <text x="140" y="60.5" font-size="6" fill="#8a93a3" text-anchor="middle">← 通路 →</text>
-        <rect x="206" y="110" width="22" height="5" fill="#fff"/><path d="M206 112 A16 16 0 0 1 222 96" fill="none" stroke="#8a93a3" stroke-width="1" stroke-dasharray="2 1.5"/>
-        <text x="217" y="122" font-size="7" fill="#1f3a68" text-anchor="middle" font-weight="700">入口</text>
-        <text x="12" y="104" font-size="6" fill="#1f3a68" font-weight="700">前方</text>
-        </svg>
-        <p class="legend"><i class="lt"></i>机 36卓　<i class="lc"></i>イス 108脚　WB＝ホワイトボード<span>※当日のレイアウト・入口位置は異なる場合があります</span></p>
-      </div>
+      <div class="room" aria-label="エールエールA館6階 フロアマップ">
+        <h3>6階 フロアマップ <small>会場は <b>ROOM2</b> です</small></h3>
+        <div class="floor-wrap">
+          <img src="floor6f.png" alt="エールエールA館6階 フロアマップ">
+          <svg class="callout" viewBox="0 0 1213 770" xmlns="http://www.w3.org/2000/svg" font-family="Zen Maru Gothic, sans-serif">
+            <rect x="262" y="49" width="210" height="131" rx="6" fill="#e8577a" fill-opacity=".16" stroke="#e8577a" stroke-width="10"/>
+            <rect x="0" y="0" width="236" height="176" rx="34" fill="#e8577a"/>
+            <path d="M222 104 L248 132 L222 150 Z" fill="#e8577a"/>
+            <line x1="246" y1="132" x2="274" y2="146" stroke="#e8577a" stroke-width="13" stroke-linecap="round"/>
+            <path d="M262 128 L306 160 L256 166 Z" fill="#e8577a"/>
+            <text x="116" y="78" font-size="54" font-weight="900" fill="#fff" text-anchor="middle">こちら</text>
+            <text x="116" y="146" font-size="54" font-weight="900" fill="#fff" text-anchor="middle">です！</text>
+          </svg>
+        </div>
+              </div>
     </section>
 
   </main>
