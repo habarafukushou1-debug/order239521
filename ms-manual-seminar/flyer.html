@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MSマニュアル研修会 開催案内</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1f3a68;
+    --navy-2:#2d4f8a;
+    --pink:#e8577a;
+    --pink-soft:#fde8ee;
+    --gold:#f2a93b;
+    --cream:#fffaf3;
+    --ink:#2a2a2a;
+    --muted:#5b6475;
+  }
+  @page{ size:A4 portrait; margin:0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:#e9e6e1; }
+  body{
+    font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+    color:var(--ink);
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  .sheet{
+    width:210mm; height:297mm; margin:0 auto; position:relative; overflow:hidden;
+    background:var(--cream);
+    display:flex; flex-direction:column;
+  }
+  @media screen{ .sheet{ margin:16px auto; box-shadow:0 6px 30px rgba(0,0,0,.18); } }
+  @media print{ html,body{ background:none; } .sheet{ margin:0; box-shadow:none; } }
+
+  /* ---------- header ---------- */
+  .head{
+    position:relative; background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
+    color:#fff; padding:11mm 14mm 15mm;
+  }
+  .head::after{ /* wave edge */
+    content:""; position:absolute; left:0; right:0; bottom:-1px; height:12mm;
+    background:var(--cream);
+    clip-path:ellipse(70% 100% at 50% 100%);
+  }
+  .to{
+    display:inline-block; font-family:"Zen Maru Gothic",sans-serif; font-weight:700;
+    font-size:12pt; letter-spacing:.08em;
+    border:1.5px solid rgba(255,255,255,.8); border-radius:999px; padding:1.2mm 5mm;
+  }
+  .kicker{ margin-top:5mm; font-size:12pt; letter-spacing:.3em; color:#ffd9e3; font-weight:700; }
+  h1{
+    font-family:"Zen Maru Gothic",sans-serif; font-weight:900;
+    font-size:38pt; line-height:1.15; letter-spacing:.04em; margin-top:1mm;
+  }
+  h1 .ms{ color:var(--gold); }
+  .sub{ margin-top:2mm; font-size:13pt; font-weight:700; opacity:.95; letter-spacing:.12em; }
+
+  /* sparkle decorations */
+  .spark{ position:absolute; color:var(--gold); font-size:18pt; }
+  .flower{ position:absolute; color:#ffb3c6; font-size:20pt; opacity:.9; }
+
+  /* ---------- body ---------- */
+  .main{ flex:1; padding:3mm 14mm 0; display:flex; flex-direction:column; gap:6.5mm; }
+
+  .datebox{
+    position:relative; background:#fff; border-radius:6mm;
+    border:2.5px solid var(--pink); padding:6mm 7mm 6mm;
+    box-shadow:0 2mm 0 var(--pink-soft);
+  }
+  .label{
+    position:absolute; top:-4.2mm; left:7mm; background:var(--pink); color:#fff;
+    font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:12pt;
+    padding:1mm 5mm; border-radius:999px; letter-spacing:.2em;
+  }
+  .date{
+    display:flex; align-items:baseline; gap:2mm; font-family:"Zen Maru Gothic",sans-serif;
+    font-weight:900; color:var(--navy); line-height:1;
+  }
+  .date .y{ font-size:16pt; margin-right:2mm; }
+  .date .n{ font-size:58pt; letter-spacing:-.02em; }
+  .date .u{ font-size:22pt; }
+  .date .dow{
+    font-size:18pt; color:#fff; background:var(--navy); border-radius:50%;
+    width:13mm; height:13mm; display:inline-flex; align-items:center; justify-content:center;
+    margin-left:2mm; transform:translateY(-3mm);
+  }
+  .time{
+    margin-top:4mm; display:flex; align-items:center; gap:4mm;
+    font-family:"Zen Maru Gothic",sans-serif; font-weight:900; color:var(--pink);
+  }
+  .time .t{ font-size:36pt; line-height:1; }
+  .time .note{ font-size:11pt; color:var(--muted); font-weight:700; line-height:1.4; }
+
+  .venue{
+    position:relative; background:#fff; border-radius:6mm; border:2.5px solid var(--navy);
+    padding:6mm 7mm 5mm; box-shadow:0 2mm 0 #dbe3f1;
+  }
+  .venue .label{ background:var(--navy); }
+  .vname{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; color:var(--navy); line-height:1.3; }
+  .vname .big{ font-size:22pt; display:block; }
+  .vname .floor{
+    display:inline-block; margin-top:1.5mm; font-size:14pt; background:var(--gold); color:#fff;
+    padding:.6mm 4mm; border-radius:2mm;
+  }
+  .vrows{ margin-top:4mm; display:grid; grid-template-columns:22mm 1fr; row-gap:2mm; font-size:11.5pt; line-height:1.5; }
+  .vrows dt{ font-weight:700; color:var(--navy); }
+  .vrows dt span{ display:inline-block; border-bottom:2px solid var(--gold); }
+  .vrows dd b{ color:var(--pink); }
+
+  .access{ display:flex; gap:5mm; align-items:stretch; }
+  .map{
+    flex:1; background:#fff; border-radius:4mm; border:1.5px dashed #b9c3d6; padding:3mm;
+  }
+  .map svg{ width:100%; height:auto; display:block; }
+  .caution{
+    width:58mm; background:var(--pink-soft); border-radius:4mm; padding:4mm 4.5mm;
+    font-size:10pt; line-height:1.6;
+  }
+  .caution h3{ font-family:"Zen Maru Gothic",sans-serif; font-size:11.5pt; color:var(--pink); margin-bottom:1.5mm; }
+  .caution li{ margin-left:4mm; }
+  .caution li + li{ margin-top:1mm; }
+
+  /* ---------- footer ---------- */
+  .foot{ margin-top:auto; padding:5mm 14mm 8mm; text-align:center; }
+  .msg{ font-size:11.5pt; line-height:1.6; background:#fff; border:2px solid var(--pink); border-radius:999px; padding:3mm 6mm; }
+  .msg strong{ color:var(--navy); display:block; font-size:12.5pt; }
+  .stamp{ position:absolute; right:8mm; top:7mm; width:66mm; z-index:2; background:#fff; border-radius:50%; padding:5mm 4mm 3mm; border:2mm solid #ffd9e3; box-shadow:0 2mm 5mm rgba(0,0,0,.25); }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="head">
+    <img class="stamp" src="stamp.png" alt="「引き続きよろしくお願いします！」のスタンプ">
+    <span class="spark" style="left:150mm;top:9mm">✦</span>
+    <span class="flower" style="left:120mm;top:46mm;font-size:14pt">✿</span>
+
+    <span class="to">MS代表委員の皆さまへ</span>
+    <p class="kicker">開催のご案内</p>
+    <h1><span class="ms">MS</span>マニュアル<br>研修会</h1>
+    <p class="sub">― ご参加よろしくお願いいたします ―</p>
+  </header>
+
+  <main class="main">
+
+    <section class="datebox">
+      <span class="label">日 時</span>
+      <div class="date">
+        <span class="y">2026年</span>
+        <span class="n">12</span><span class="u">月</span>
+        <span class="n">2</span><span class="u">日</span>
+        <span class="dow">水</span>
+      </div>
+      <div class="time">
+        <span class="t">13:00 〜 17:00</span>
+        <span class="note">受付は開始時刻の<br>10分前を目安にお越しください</span>
+      </div>
+    </section>
+
+    <section class="venue">
+      <span class="label">会 場</span>
+      <p class="vname">
+        <span class="big">RCC文化センター エールエール会議室</span>
+        <span class="floor">エールエールA館 6階</span>
+      </p>
+      <dl class="vrows">
+        <dt><span>住所</span></dt>
+        <dd>広島市南区松原町9-1 エールエールA館 6階</dd>
+        <dt><span>アクセス</span></dt>
+        <dd><b>JR広島駅 南口から徒歩約1分</b><br>駅前から直結通路あり・雨の日も濡れずに来場できます</dd>
+      </dl>
+    </section>
+
+    <section class="access">
+      <div class="map" aria-label="会場周辺の簡易地図">
+        <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans JP, sans-serif">
+          <rect width="300" height="120" fill="#f7f9fc"/>
+          <!-- rail -->
+          <rect x="0" y="18" width="300" height="10" fill="#c9d1de"/>
+          <g stroke="#fff" stroke-width="2">
+            <line x1="10" y1="23" x2="290" y2="23" stroke-dasharray="8 6"/>
+          </g>
+          <text x="8" y="12" font-size="9" fill="#5b6475">JR山陽本線</text>
+          <!-- station -->
+          <rect x="105" y="30" width="110" height="26" rx="4" fill="#1f3a68"/>
+          <text x="160" y="47" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">JR広島駅</text>
+          <rect x="140" y="56" width="40" height="10" fill="#1f3a68"/>
+          <text x="160" y="64" font-size="7" fill="#fff" text-anchor="middle">南口</text>
+          <!-- plaza / road -->
+          <rect x="0" y="68" width="300" height="12" fill="#e3e7ee"/>
+          <text x="8" y="77" font-size="8" fill="#5b6475">駅前大通り</text>
+          <!-- skywalk -->
+          <path d="M175 66 L175 72 L222 72 L222 84" fill="none" stroke="#e8577a" stroke-width="3" stroke-dasharray="5 3"/>
+          <text x="232" y="64" font-size="8" fill="#e8577a" font-weight="700">直結通路</text>
+          <!-- building -->
+          <rect x="196" y="84" width="72" height="30" rx="4" fill="#e8577a"/>
+          <text x="232" y="97" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">エールエール</text>
+          <text x="232" y="109" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">A館 6F</text>
+          <!-- pin -->
+          <g transform="translate(276 84)">
+            <path d="M0 0 C-8 -8 -8 -20 0 -20 C8 -20 8 -8 0 0Z" fill="#f2a93b"/>
+            <circle cx="0" cy="-13" r="3" fill="#fff"/>
+          </g>
+          <!-- other buildings -->
+          <rect x="20" y="84" width="60" height="26" rx="4" fill="#dfe4ec"/>
+          <rect x="95" y="84" width="80" height="26" rx="4" fill="#dfe4ec"/>
+          <text x="150" y="118" font-size="7" fill="#8a93a3" text-anchor="middle">※簡易図です（縮尺は正確ではありません）</text>
+        </svg>
+      </div>
+      <div class="caution">
+        <h3>ご注意ください</h3>
+        <ul>
+          <li>同日の<strong>役員会はシェラトン</strong>です。研修会は会場が異なります。</li>
+          <li>広島駅すぐの会場です。公共交通機関のご利用をおすすめします。</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <p class="msg"><strong>当日の会場は「駅前のRCCエールエール」です。</strong>皆さまのご参加をお待ちしております。</p>
+  </footer>
+
+</div>
+</body>
+</html>
